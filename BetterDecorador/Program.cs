@@ -6,6 +6,10 @@ namespace BetterDecorador
 {
     public class Program
     {
+        /// <summary>
+        /// Converts the args the user inputs when the project runs
+        /// </summary>
+        /// <param name="args"></param>
         private static void Main(string[] args)
         {
             string s = args[0];
@@ -14,7 +18,13 @@ namespace BetterDecorador
             string decString = Decor(s, dec, count);
             Console.WriteLine(decString);
         }
-
+        /// <summary>
+        /// Decorates a string
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="dec"></param>
+        /// <param name="count"></param>
+        /// <returns>The decorated string</returns>
         private static string Decor(string s, char dec, int count)
         {
            string decString = new string(dec, count);
