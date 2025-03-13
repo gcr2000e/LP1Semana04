@@ -8,13 +8,18 @@ namespace BetterDecorador
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine(Decor("Good Morning!", '*'));
-            Console.WriteLine(Decor("Good Evening!", '.'));
+            string s = args[0];
+            char dec = Convert.ToChar(args[1]);
+            int count = int.Parse(args[2]);
+            string decString = Decor(s, dec, count);
+            Console.WriteLine(decString);
         }
 
-        private static string Decor(string s, char dec)
+        private static string Decor(string s, char dec, int count)
         {
-           return $"{dec} {dec} {dec} {s} {dec} {dec} {dec}";
+           string decString = new string(dec, count);
+
+           return decString + s + decString;
         }
     }
 }
